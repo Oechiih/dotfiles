@@ -1,0 +1,26 @@
+using namespace System.Management.Automation
+using namespace System.Management.Automation.Language
+
+Import-Module PSReadline
+
+Set-PSReadLineOption -HistoryNoDuplicates
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
+Set-PSReadLineOption -MaximumHistoryCount 400
+
+Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# CaptureScreen is good for blog posts or email showing a transaction
+# of what you did when asking for help or demonstrating a technique.
+Set-PSReadLineKeyHandler -Chord 'Ctrl+D,Ctrl+C' -Function CaptureScreen
+
+# The built-in word movement uses character delimiters, but token based word
+# movement is also very useful - these are the bindings you'd use if you
+# prefer the token based movements bound to the normal emacs word movement
+# key bindings.
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+LeftArrow -Function SelectShellBackwardWord
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+RightArrow -Function SelectShellForwardWord
+Get-PSReadLineKeyHandler | Where-Object Group -eq 'Custom'
