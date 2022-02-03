@@ -79,11 +79,16 @@
     "enabled": false,
     "liveIndexing": true,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
   },
   "terraform.languageServer": {
     "external": true,
-    "args": ["serve"]
+    "args": [
+      "serve"
+    ]
   },
   "scm.alwaysShowRepositories": true,
   "[javascript]": {
@@ -100,5 +105,11 @@
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "go.toolsManagement.autoUpdate": true,
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "go.alternateTools": {
+    "go": "/opt/homebrew/bin/go"
+  }
 }

@@ -24,3 +24,5 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+D,Ctrl+C' -Function CaptureScreen
 Set-PSReadLineKeyHandler -Key Ctrl+Shift+LeftArrow -Function SelectShellBackwardWord
 Set-PSReadLineKeyHandler -Key Ctrl+Shift+RightArrow -Function SelectShellForwardWord
 Get-PSReadLineKeyHandler | Where-Object Group -eq 'Custom'
+
+$env:PATH += ':/opt/homebrew/bin'
