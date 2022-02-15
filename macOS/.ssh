@@ -1,0 +1,20 @@
+#~/.ssh/config
+
+#If you want to use the same identity file and configuration for any domain use a * wildcard
+ Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+# if you used a custom name for your identity file, use that name here
+  IdentityFile ~/.ssh/id_ed25519
+
+# If you want to have a different identity file for each project you can specify it by domain or IP
+Host devops_livetiles-products
+ HostName ssh.dev.azure.com
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/livetiles_rsa
+
+# Host 10.0.0.1
+#  AddKeysToAgent yes
+#  UseKeychain yes
+#  IdentityFile ~/.ssh/id_rderik_server2_test

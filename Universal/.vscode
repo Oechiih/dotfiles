@@ -105,7 +105,7 @@
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "go.toolsManagement.autoUpdate": true,
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 3,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
