@@ -25,4 +25,8 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+LeftArrow -Function SelectShellBackward
 Set-PSReadLineKeyHandler -Key Ctrl+Shift+RightArrow -Function SelectShellForwardWord
 Get-PSReadLineKeyHandler | Where-Object Group -eq 'Custom'
 
-$env:PATH += ':/opt/homebrew/bin'
+if (-not $IsWindows) {
+    Set-Alias -Name clip -Value Set-Clipboard
+    $env:PATH += ':/opt/homebrew/bin'
+    $env:VAGRANT_DEFAULT_PROVIDER = 'parallels'
+}

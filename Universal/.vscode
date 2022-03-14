@@ -32,8 +32,8 @@
   "workbench.editor.openPositioning": "first",
   "workbench.editor.showTabs": false,
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.preferredDarkColorTheme": "Default Dark+",
-  "workbench.preferredLightColorTheme": "Default Dark+",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "workbench.preferredLightColorTheme": "GitHub Dark Default",
   "workbench.list.smoothScrolling": true,
   "window.autoDetectColorScheme": true,
   //Custom settings / Files
@@ -111,5 +111,6 @@
   },
   "go.alternateTools": {
     "go": "/opt/homebrew/bin/go"
-  }
+  },
+  "workbench.colorTheme": "GitHub Dark Default"
 }
