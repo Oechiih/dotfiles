@@ -1,11 +1,14 @@
 #~/.ssh/config
 
-#If you want to use the same identity file and configuration for any domain use a * wildcard
- Host *
-  AddKeysToAgent yes
-  UseKeychain yes
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# If you want to use the same identity file and configuration for any domain use a * wildcard
+# Host *
+#  AddKeysToAgent yes
+#  UseKeychain yes
 # if you used a custom name for your identity file, use that name here
-  IdentityFile ~/.ssh/id_ed25519
+#  IdentityFile ~/.ssh/id_ed25519
 
 # If you want to have a different identity file for each project you can specify it by domain or IP
 Host devops_livetiles-products
@@ -14,7 +17,7 @@ Host devops_livetiles-products
  UseKeychain yes
  IdentityFile ~/.ssh/livetiles_rsa
 
-# Host 10.0.0.1
+# <!-- Host 13.81.173.1
 #  AddKeysToAgent yes
 #  UseKeychain yes
-#  IdentityFile ~/.ssh/id_rderik_server2_test
+#  IdentityFile ~/.ssh/livetiles_rsa -->

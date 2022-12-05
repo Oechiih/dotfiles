@@ -15,7 +15,7 @@
   //Custom settings / Editor
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
-  "editor.fontSize": 14,
+  "editor.fontSize": 18,
   "editor.fontFamily": "'Cascadia Code',Consolas, 'Courier New', monospace",
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.minimap.enabled": false,
@@ -28,6 +28,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.mouseWheelZoom": true,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairsHorizontal": true,
   //Custom settings / Workbench
   "workbench.editor.openPositioning": "first",
   "workbench.editor.showTabs": false,
@@ -66,7 +67,6 @@
       "exePath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
     }
   ],
-  "liveshare.featureSet": "insiders",
   "markdown.preview.fontFamily": "'Cascadia Code', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
   "markdownlint.config": {
     "MD025": {
@@ -79,16 +79,11 @@
     "enabled": false,
     "liveIndexing": true,
     "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
     "external": true,
-    "args": [
-      "serve"
-    ]
+    "args": ["serve"]
   },
   "scm.alwaysShowRepositories": true,
   "[javascript]": {
@@ -105,12 +100,15 @@
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "go.toolsManagement.autoUpdate": true,
-  "window.zoomLevel": 3,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "go.alternateTools": {
     "go": "/opt/homebrew/bin/go"
   },
-  "workbench.colorTheme": "GitHub Dark Default"
+  "workbench.colorTheme": "GitHub Dark Default",
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": -1,
+  "editor.stickyScroll.enabled": true
 }
