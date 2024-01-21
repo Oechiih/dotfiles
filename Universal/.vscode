@@ -1,16 +1,5 @@
 {
   "workbench.startupEditor": "welcomePage",
-  "gitlens.keymap": "chorded",
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true
-  },
   "explorer.confirmDragAndDrop": false,
   //Custom settings / Editor
   "editor.cursorBlinking": "expand",
@@ -25,18 +14,21 @@
   "editor.snippetSuggestions": "bottom",
   "editor.wordWrap": "on",
   "editor.wrappingIndent": "indent",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.mouseWheelZoom": true,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairsHorizontal": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.stickyScroll.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": false,
   //Custom settings / Workbench
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.preferredLightColorTheme": "GitHub Dark Default",
   "workbench.list.smoothScrolling": true,
-  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "window.commandCenter": false,
   //Custom settings / Files
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
@@ -45,46 +37,65 @@
   "files.defaultLanguage": "${activeEditorLanguage}",
   //Custom settings / Terminal
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-  //"terminal.integrated.fontFamily": "'Cascadia Code'",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    },
+    "fish": {
+      "path": "fish",
+      "args": [
+        "-l"
+      ]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.osx": "pwsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  // "terminal.integrated.fontFamily": "'Cascadia Code'",
   //Custom extension settings / Misc
   "explorer.sortOrder": "type",
-  "team.showWelcomeMessage": false,
-  "material-icon-theme.folders.theme": "classic",
-  "git.autofetch": true,
-  "markdownlint.customRules": [
-    "{docsmsft.docs-markdown}/markdownlint-custom-rules/rules.js"
-  ],
-  "editor.largeFileOptimizations": false,
+  "git.autofetch": false,
   "breadcrumbs.enabled": true,
   "explorer.confirmDelete": false,
-  "timeline.showView": true,
   "powershell.codeFormatting.preset": "OTBS",
-  "powershell.powerShellDefaultVersion": "7",
-  "powershell.powerShellAdditionalExePaths": [
-    {
-      "versionName": "7",
-      "exePath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
-    }
-  ],
   "markdown.preview.fontFamily": "'Cascadia Code', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
-  "markdownlint.config": {
-    "MD025": {
-      "front_matter_title": ""
-    }
-  },
   "extensions.ignoreRecommendations": false,
   "problems.showCurrentInStatus": true,
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": true,
-    "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
-  },
-  "terraform.languageServer": {
-    "external": true,
-    "args": ["serve"]
-  },
   "scm.alwaysShowRepositories": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -106,9 +117,23 @@
   "go.alternateTools": {
     "go": "/opt/homebrew/bin/go"
   },
-  "workbench.colorTheme": "GitHub Dark Default",
   "redhat.telemetry.enabled": false,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "window.zoomLevel": -1,
-  "editor.stickyScroll.enabled": true
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "terraform.languageServer.enable": true,
+  "terraform.codelens.referenceCount": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "powershell.promptToUpdatePowerShell": false,
+  "gitlens.graph.minimap.enabled": false,
+  "gitlens.graph.minimap.additionalTypes": [
+    "stashes"
+  ],
+  "window.zoomLevel": -0.25,
+  "gitlens.graph.layout": "editor",
 }
