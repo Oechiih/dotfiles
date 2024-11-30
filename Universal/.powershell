@@ -33,10 +33,14 @@ if (-not $IsWindows) {
 
 function prompt {
     $color = $? ? 'Blue' : 'Red'
+    $git = git branch
     Write-Host '  ' -ForegroundColor Blue -NoNewLine
     Write-Host "$($executionContext.SessionState.Path.CurrentLocation)" -NoNewLine
-    Write-Host '  ' -ForegroundColor Blue -NoNewLine
-    Write-Host "$((git branch).Trim('*'))" -ForegroundColor Green
+    if($git){
+        Write-Host '  ' -ForegroundColor Blue -NoNewLine
+        Write-Host $git.Trim('*') -ForegroundColor Green -NoNewLine
+    }
+    Write-Host ''
     Write-Host ' ' -ForegroundColor $color -NoNewLine
     return " "
 }
