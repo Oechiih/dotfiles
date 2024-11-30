@@ -30,3 +30,13 @@ if (-not $IsWindows) {
     $env:PATH += ':/opt/homebrew/bin'
     $env:VAGRANT_DEFAULT_PROVIDER = 'parallels'
 }
+
+function prompt {
+    $color = $? ? 'Blue' : 'Red'
+    Write-Host '  ' -ForegroundColor Blue -NoNewLine
+    Write-Host "$($executionContext.SessionState.Path.CurrentLocation)" -NoNewLine
+    Write-Host '  ' -ForegroundColor Blue -NoNewLine
+    Write-Host "$((git branch).Trim('*'))" -ForegroundColor Green
+    Write-Host ' ' -ForegroundColor $color -NoNewLine
+    return " "
+}

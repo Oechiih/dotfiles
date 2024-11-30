@@ -7,11 +7,11 @@ gui:
   scrollOffBehavior: margin
   mouseEvents: true
   skipDiscardChangeWarning: false
-  skipStashWarning: false
-  skipNoStagedFilesWarning: false
+  skipStashWarning: true
+  skipNoStagedFilesWarning: true
   skipRewordInEditorWarning: false
   sidePanelWidth: 0.3333
-  expandFocusedSidePanel: false
+  expandFocusedSidePanel: true
   expandedSidePanelWeight: 2
   mainPanelSplitMode: flexible
   enlargedSideViewLocation: left
@@ -21,7 +21,7 @@ gui:
   showListFooter: true
   showFileTree: true
   showRandomTip: true
-  showCommandLog: true
+  showCommandLog: false
   showBottomLine: true
   showPanelJumps: true
   showIcons: false
@@ -37,8 +37,30 @@ gui:
   border: rounded
   animateExplosion: true
   portraitMode: auto
-  filterMode: substring
+  filterMode: fuzzy
   statusPanelView: dashboard
   switchToFilesAfterStashPop: true
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
+  nerdFontsVersion: "3"
+ # Use the mocha catppuccin theme
+  theme:
+   activeBorderColor:
+     - '#89b4fa'
+     - bold
+   inactiveBorderColor:
+     - '#a6adc8'
+   optionsTextColor:
+     - '#89b4fa'
+   selectedLineBgColor:
+     - '#313244'
+   cherryPickedCommitBgColor:
+     - '#45475a'
+   cherryPickedCommitFgColor:
+     - '#89b4fa'
+   unstagedChangesColor:
+     - '#f38ba8'
+   defaultFgColor:
+     - '#cdd6f4'
+   searchingActiveBorderColor:
+     - '#f9e2af'

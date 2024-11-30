@@ -5,20 +5,8 @@ $extensions = @(
     "docsmsft.docs-markdown"
     "esbenp.prettier-vscode"
     "GitHub.github-vscode-theme"
-    "golang.go"
-    "hashicorp.terraform"
-    "mechatroner.rainbow-csv"
-    "ms-azuretools.vscode-azureresourcegroups"
-    "ms-azuretools.vscode-azurestaticwebapps"
-    "ms-azuretools.vscode-azurestorage"
-    "ms-azuretools.vscode-bicep"
-    "ms-azuretools.vscode-docker"
-    "ms-dotnettools.vscode-dotnet-runtime"
-    "ms-vscode-remote.remote-containers"
-    "ms-vscode.azure-account"
-    "ms-vscode.powershell"
-    "ms-vsliveshare.vsliveshare"
     "yzhang.markdown-all-in-one"
+    "bbenoist.nix"
 )
 
 foreach ($extension in $extensions) {
