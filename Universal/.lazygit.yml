@@ -20,20 +20,19 @@ gui:
   shortTimeFormat: "3:04PM"
   showListFooter: true
   showFileTree: true
-  showRandomTip: true
+  showRandomTip: false
   showCommandLog: false
   showBottomLine: true
   showPanelJumps: true
-  showIcons: false
   showFileIcons: true
   commitAuthorShortLength: 2
   commitAuthorLongLength: 17
-  commitHashLength: 8
+  commitHashLength: 0
   showBranchCommitHash: false
   showDivergenceFromBaseBranch: none
   commandLogSize: 8
   splitDiff: auto
-  windowSize: normal
+  screenMode: normal
   border: rounded
   animateExplosion: true
   portraitMode: auto
@@ -43,24 +42,36 @@ gui:
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
   nerdFontsVersion: "3"
- # Use the mocha catppuccin theme
+  branchColorPatterns:
+    'feature': 'blue'
+    'chore': 'yellow'
+    'main': 'green'
+    'fix': 'red'
+
+  # Use the mocha catppuccin theme
   theme:
-   activeBorderColor:
-     - '#89b4fa'
-     - bold
-   inactiveBorderColor:
-     - '#a6adc8'
-   optionsTextColor:
-     - '#89b4fa'
-   selectedLineBgColor:
-     - '#313244'
-   cherryPickedCommitBgColor:
-     - '#45475a'
-   cherryPickedCommitFgColor:
-     - '#89b4fa'
-   unstagedChangesColor:
-     - '#f38ba8'
-   defaultFgColor:
-     - '#cdd6f4'
-   searchingActiveBorderColor:
-     - '#f9e2af'
+    activeBorderColor:
+      - '#89b4fa'
+      - bold
+    inactiveBorderColor:
+      - '#a6adc8'
+    optionsTextColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#44455c'
+    cherryPickedCommitBgColor:
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#89b4fa'
+    unstagedChangesColor:
+      - '#f38ba8'
+    defaultFgColor:
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
+
+  authorColors:
+    '*': '#b4befe'
+
+git:
+  autoForwardBranches: allBranches

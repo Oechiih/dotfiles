@@ -1,16 +1,16 @@
 {
-  "workbench.startupEditor": "welcomePage",
+  "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
   //Custom settings / Editor
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
   "editor.fontSize": 18,
-  "editor.fontFamily": "'Cascadia Code',Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'Liga SFMono Nerd Font', 'Cascadia Code',Consolas, 'Courier New', monospace",
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.minimap.enabled": false,
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "all",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "selection",
   "editor.snippetSuggestions": "bottom",
   "editor.wordWrap": "on",
   "editor.wrappingIndent": "indent",
@@ -22,12 +22,13 @@
   "editor.stickyScroll.enabled": true,
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
+  "editor.codeLens": false,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
   //Custom settings / Workbench
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": "single",
+  "workbench.editor.showTabs": "none",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.list.smoothScrolling": true,
-  "workbench.colorTheme": "GitHub Dark Default",
   "window.commandCenter": false,
   //Custom settings / Files
   "files.autoSave": "afterDelay",
@@ -40,22 +41,16 @@
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
-      "args": [
-        "-l"
-      ],
+      "args": ["-l"],
       "icon": "terminal-bash"
     },
     "zsh": {
       "path": "zsh",
-      "args": [
-        "-l"
-      ]
+      "args": ["-l"]
     },
     "fish": {
       "path": "fish",
-      "args": [
-        "-l"
-      ]
+      "args": ["-l"]
     },
     "tmux": {
       "path": "tmux",
@@ -86,14 +81,15 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.defaultProfile.osx": "pwsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  // "terminal.integrated.fontFamily": "'Cascadia Code'",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontFamily": "'Liga SFMono Nerd Font',Consolas, 'Courier New', monospace",
   //Custom extension settings / Misc
   "explorer.sortOrder": "type",
   "git.autofetch": false,
   "breadcrumbs.enabled": true,
   "explorer.confirmDelete": false,
   "powershell.codeFormatting.preset": "OTBS",
-  "markdown.preview.fontFamily": "'Cascadia Code', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
+  "markdown.preview.fontFamily": "'Liga SFMono Nerd Font', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
   "extensions.ignoreRecommendations": false,
   "problems.showCurrentInStatus": true,
   "scm.alwaysShowRepositories": true,
@@ -127,13 +123,28 @@
     "*": true,
     "yaml": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
   "powershell.promptToUpdatePowerShell": false,
-  "gitlens.graph.minimap.enabled": false,
-  "gitlens.graph.minimap.additionalTypes": [
-    "stashes"
-  ],
   "window.zoomLevel": -0.25,
-  "gitlens.graph.layout": "editor",
+  "git.blame.statusBarItem.enabled": false,
+  "git.enableSmartCommit": true,
+  "explorer.openEditors.visible": 45,
+  "git.confirmSync": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.activityBar.location": "bottom",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.blame.editorDecoration.enabled": true
 }
