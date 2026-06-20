@@ -153,6 +153,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": false,
+  "git.rebaseWhenSync": true,
   "git.blame.editorDecoration.enabled": true,
   "git.blame.statusBarItem.enabled": false,
   "git.confirmSync": false,
@@ -233,6 +234,9 @@
         "-l"
       ],
       "path": "fish"
+    },
+    "nu": {
+      "path": "nu"
     },
     "pwsh": {
       "icon": "terminal-powershell",

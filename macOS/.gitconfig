@@ -18,6 +18,9 @@
 [init]
 	defaultBranch = main
 
+[log]
+	date = format:%d %b %y
+
 [alias]
 	lg = log --oneline --graph --decorate --all
 	st = status -sb

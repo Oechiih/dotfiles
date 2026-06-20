@@ -1,0 +1,7 @@
+theme = catppuccin-frappe.conf
+macos-option-as-alt = left
+font-family = Liga SFMono Nerd Font
+font-size = 18
+cursor-style = bar
+cursor-style-blink = true
+mouse-hide-while-typing = true

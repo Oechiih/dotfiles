@@ -29,7 +29,8 @@ gui:
   commitAuthorLongLength: 17
   commitHashLength: 0
   showBranchCommitHash: false
-  showDivergenceFromBaseBranch: none
+  showDivergenceFromBaseBranch: onlyArrow
+  wrapLinesInDiff: true
   commandLogSize: 8
   splitDiff: auto
   screenMode: normal
@@ -52,7 +53,7 @@ gui:
     "main": "green"
     "fix": "red"
 
-  # Use the mocha catppuccin theme
+  # Use the frappé catppuccin theme
   theme:
     activeBorderColor:
       - '#89b4fa'
@@ -77,26 +78,28 @@ gui:
   authorColors:
     '*': '#b4befe'
       - "#89b4fa"
+      - "#8caaee"
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#a5adce"
     optionsTextColor:
-      - "#89b4fa"
+      - "#8caaee"
     selectedLineBgColor:
-      - "#44455c"
+      - "#414559"
     cherryPickedCommitBgColor:
-      - "#45475a"
+      - "#51576d"
     cherryPickedCommitFgColor:
-      - "#89b4fa"
+      - "#8caaee"
     unstagedChangesColor:
-      - "#f38ba8"
+      - "#e78284"
     defaultFgColor:
-      - "#cdd6f4"
+      - "#c6d0f5"
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#e5c890"
 
   authorColors:
-    "*": "#b4befe"
+    "*": "#babbf1"
 
 git:
   autoForwardBranches: allBranches
+  autoStash: true
