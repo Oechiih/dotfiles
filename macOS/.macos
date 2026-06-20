@@ -23,7 +23,7 @@ defaults write "Apple Global Domain" AppleInterfaceStyleSwitchesAutomatically -b
 defaults write "Apple Global Domain" NSTableViewDefaultSizeMode -int 1
 
 # Set tabs to always be preferred
-defaults write "Apple Global Domain" AppleInterfaceStyleSwitchesAutomatically -string "always"
+defaults write "Apple Global Domain" AppleWindowTabbingMode -string "always"
 
 # Ask for saving changes on close
 defaults write "Apple Global Domain" NSCloseAlwaysConfirmsChanges -bool true
