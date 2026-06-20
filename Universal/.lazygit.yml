@@ -47,6 +47,10 @@ gui:
     'chore': 'yellow'
     'main': 'green'
     'fix': 'red'
+    "feature": "blue"
+    "chore": "yellow"
+    "main": "green"
+    "fix": "red"
 
   # Use the mocha catppuccin theme
   theme:
@@ -72,6 +76,27 @@ gui:
 
   authorColors:
     '*': '#b4befe'
+      - "#89b4fa"
+      - bold
+    inactiveBorderColor:
+      - "#a6adc8"
+    optionsTextColor:
+      - "#89b4fa"
+    selectedLineBgColor:
+      - "#44455c"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#89b4fa"
+    unstagedChangesColor:
+      - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
+    searchingActiveBorderColor:
+      - "#f9e2af"
+
+  authorColors:
+    "*": "#b4befe"
 
 git:
   autoForwardBranches: allBranches

@@ -1,6 +1,8 @@
-cat << EOF >> ~/.zprofile
-# Add Visual Studio Code (code)
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-EOF
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
-export VAGRANT_DEFAULT_PROVIDER=parallels
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
+eval "$(zoxide init zsh)"

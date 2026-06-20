@@ -1,0 +1,6 @@
+[fetch]
+	prune = true
+
+[user]
+	name = "Jan Oehen"
+	email = "jan.oe.hen@live.com"
