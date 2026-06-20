@@ -99,17 +99,76 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "breadcrumbs.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  "diffEditor.ignoreTrimWhitespace": false,
   "dotnetAcquisitionExtension.existingDotnetPath": [
     {
       "extensionId": "ms-azuretools.vscode-bicep",
       "path": "/usr/local/share/dotnet/dotnet"
     }
   ],
-  "diffEditor.ignoreTrimWhitespace": false,
-  "go.toolsManagement.autoUpdate": true,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.foldingStrategy": "indentation",
+  "editor.fontFamily": "'Liga SFMono Nerd Font', 'Cascadia Code',Consolas, 'Courier New', monospace",
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "selection",
+  "editor.snippetSuggestions": "bottom",
+  "editor.stickyScroll.enabled": true,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 45,
+  "explorer.sortOrder": "type",
+  "extensions.ignoreRecommendations": false,
+  "files.autoSave": "afterDelay",
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": false,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.replaceTagsWhenPull": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false,
+    "yaml": false
   },
+  "github.copilot.nextEditSuggestions.enabled": false,
   "go.alternateTools": {
     "go": "/opt/homebrew/bin/go"
   },
@@ -147,4 +206,79 @@
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
   "git.blame.editorDecoration.enabled": true
+  "go.toolsManagement.autoUpdate": true,
+  "markdown.preview.fontFamily": "'Liga SFMono Nerd Font', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
+  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.promptToUpdatePowerShell": false,
+  "problems.showCurrentInStatus": true,
+  "redhat.telemetry.enabled": false,
+  "scm.alwaysShowRepositories": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.osx": "pwsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "'Liga SFMono Nerd Font',Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "fish": {
+      "args": [
+        "-l"
+      ],
+      "path": "fish"
+    },
+    "pwsh": {
+      "icon": "terminal-powershell",
+      "path": "pwsh"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "args": [
+        "-l"
+      ],
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "args": [],
+      "icon": "terminal-cmd",
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ]
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    }
+  },
+  "terraform.codelens.referenceCount": true,
+  "terraform.languageServer.enable": true,
+  "window.commandCenter": false,
+  "window.zoomLevel": -0.25,
+  "workbench.activityBar.location": "bottom",
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.openPositioning": "first",
+  "workbench.editor.showTabs": "none",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.layoutControl.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.startupEditor": "none"
 }
