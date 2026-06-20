@@ -28,20 +28,29 @@ defaults write "Apple Global Domain" AppleWindowTabbingMode -string "always"
 # Ask for saving changes on close
 defaults write "Apple Global Domain" NSCloseAlwaysConfirmsChanges -bool true
 
-# Disable auto-correct
+# Disable auto-correct and all other text substitutions
 defaults write "Apple Global Domain" NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write "Apple Global Domain" NSAutomaticCapitalizationEnabled -bool false
+defaults write "Apple Global Domain" NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write "Apple Global Domain" NSAutomaticDashSubstitutionEnabled -bool false
+defaults write "Apple Global Domain" NSAutomaticPeriodSubstitutionEnabled -bool false
 
-# Screenshot directly to clipboard
+# Hide Siri from menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+# Screenshot directly to clipboard, no drop shadow
 defaults write com.apple.screencapture target -string "clipboard"
+defaults write com.apple.screencapture disable-shadow -bool true
 
 # Disable personalized Ads
 defaults write com.apple.AdLib allowApplePersonalizedAdvertising -bool false
 
-# Show battery percentage in menubar; Doesn't really work though
-# defaults write com.apple.menuextra.battery ShowPercent -bool true
+# Show battery percentage in menubar (both domains needed for macOS Ventura+)
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
 
 # Enable Night Shift on schedule
-# Couldn't find the setting domain
+# Cannot be scripted — set manually in System Settings > Displays > Night Shift
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -63,6 +72,30 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
+
+# Auto-hide the Dock instantly
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# Set Dock contents
+dockutil --remove all --no-restart
+dockutil --add /Applications/Zen.app                      --no-restart
+dockutil --add /System/Applications/Mail.app              --no-restart
+dockutil --add /System/Applications/Messages.app          --no-restart
+dockutil --add /System/Applications/Calendar.app          --no-restart
+dockutil --add /System/Applications/Music.app             --no-restart
+dockutil --add "/Applications/Visual Studio Code.app"     --no-restart
+dockutil --add /Applications/Ghostty.app                  --no-restart
+dockutil --add /Applications/1Password.app                --no-restart
+dockutil --add /Applications/Reeder.app                   --no-restart
+dockutil --add /Applications/Mela.app                     --no-restart
+dockutil --add "/Applications/Royal TSX.app"              --no-restart
+dockutil --add /Applications/Discord.app                  --no-restart
+dockutil --add "/Applications/IBKR Desktop.app"           --no-restart
+dockutil --add /Applications/TradingView.app              --no-restart
+dockutil --add /Applications/Infuse.app                   --no-restart
+dockutil --add "/Applications/Bambu Studio.app"           --no-restart
 
 # Always show sound in menubar
 defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
@@ -104,6 +137,10 @@ defaults write com.apple.Accessibility AXSSpatialAudioHeadTracking -bool false
 
 # Enable volume change feedback
 defaults write "Apple Global Domain" "com.apple.sound.beep.feedback" -bool true
+
+# Faster key repeat (default: KeyRepeat=6, InitialKeyRepeat=25)
+defaults write "Apple Global Domain" KeyRepeat -int 2
+defaults write "Apple Global Domain" InitialKeyRepeat -int 15
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
@@ -168,11 +205,8 @@ sudo chflags nohidden /Volumes
 # Safari & WebKit                                                             #
 ###############################################################################
 
-# Show the full URL in the address bar (note: this still hides the scheme); Doesn't work though
-# defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-
-# Enable “Do Not Track”; Doesn't work though
-# defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+# Safari is sandboxed on modern macOS — preferences cannot be written via defaults.
+# Show full URL: Safari Settings > Advanced > "Show full website address"
 
 ###############################################################################
 # Spotlight                                                                   #
@@ -193,6 +227,13 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
+# TextEdit                                                                    #
+###############################################################################
+
+# Open and save in plain text mode by default
+defaults write com.apple.TextEdit RichText -bool false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -207,8 +248,10 @@ for app in "Activity Monitor" \
 	"Messages" \
 	"Photos" \
 	"Safari" \
+	"Siri" \
 	"SystemUIServer" \
 	"Terminal" \
+	"TextEdit" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
