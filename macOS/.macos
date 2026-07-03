@@ -227,6 +227,15 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
+# Rectangle                                                                   #
+###############################################################################
+
+defaults write com.knollsoft.Rectangle launchOnLogin -bool true
+defaults write com.knollsoft.Rectangle hideMenubarIcon -bool false
+defaults write com.knollsoft.Rectangle gapSize -float 8
+defaults write com.knollsoft.Rectangle windowSnapping -bool true
+
+###############################################################################
 # TextEdit                                                                    #
 ###############################################################################
 
@@ -247,6 +256,7 @@ for app in "Activity Monitor" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
+	"Rectangle" \
 	"Safari" \
 	"Siri" \
 	"SystemUIServer" \
