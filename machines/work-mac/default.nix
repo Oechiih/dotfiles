@@ -13,13 +13,14 @@
 
   system.defaults.dock.persistent-apps = [
     "/Applications/Zen.app"
-    "/System/Applications/Mail.app"
-    "/System/Applications/Messages.app"
-    "/System/Applications/Calendar.app"
+    "/Applications/Microsoft Edge.app"
+    "/Applications/Microsoft Teams.app"
+    "/Applications/Microsoft Outlook.app"
+    "/System/Applications/Music.app"
     "/Applications/Visual Studio Code.app"
     "/Applications/Ghostty.app"
+    "/Applications/Bitwarden.app"
     "/Applications/1Password.app"
-    "/Applications/Microsoft Edge.app"
     "/Applications/Windows App.app"
   ];
 
