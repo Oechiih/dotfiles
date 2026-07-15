@@ -16,6 +16,7 @@
     ];
     casks = [
       "1password"
+      "bettermouse"
       "blockblock"
       "ghostty"
       "lulu"

@@ -5,7 +5,6 @@
 
   homebrew.casks = [
     "bambu-studio"
-    "bettermouse"
     "discord"
     "gimp"
     "ibkr"

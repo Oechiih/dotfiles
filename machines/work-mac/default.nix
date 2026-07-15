@@ -1,19 +1,17 @@
 { ... }: {
   system.primaryUser = "joe";
 
-  # Work Mac hostname is company-managed — not set here.
-  # Apply with: just switch-work
-
-  homebrew.casks = [
-    # TODO: add work-specific casks
-    "discord"
+  homebrew.taps = [ "azure/functions" ];
+  homebrew.brews = [
+    "azure/functions/azure-functions-core-tools@4"
   ];
-  homebrew.masApps = {
-    # TODO: add work-specific MAS apps
-  };
+  homebrew.casks = [
+    "bitwarden"
+    "microsoft-edge"
+    "windows-app"
+  ];
 
   system.defaults.dock.persistent-apps = [
-    # TODO: set work dock order
     "/Applications/Zen.app"
     "/System/Applications/Mail.app"
     "/System/Applications/Messages.app"
@@ -21,7 +19,8 @@
     "/Applications/Visual Studio Code.app"
     "/Applications/Ghostty.app"
     "/Applications/1Password.app"
-    "/Applications/Discord.app"
+    "/Applications/Microsoft Edge.app"
+    "/Applications/Windows App.app"
   ];
 
   home-manager.users.joe = { ... }: {
