@@ -13,13 +13,12 @@
 
   users.users.joe.home = "/Users/joe";
 
-  services.nix-daemon.enable = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
-  security.pam.enableSudoTouchIdAuth = true;
-
-  # Avoid a logout/login cycle after rebuild
-  system.activationScripts.postUserActivation.text = ''
-    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+  # Avoid a logout/login cycle after rebuild — activation now runs as root,
+  # so run this as the user it needs to affect.
+  system.activationScripts.postActivation.text = ''
+    sudo -u joe /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   '';
 
   system.stateVersion = 5;

@@ -49,7 +49,7 @@
       bindkey '^G' _lazygit_widget
 
       # Nerd Font icons via ANSI-C quoting — the two single quotes in $'\uXXXX'
-      # are separated by \uXXXX so they never form the '' Nix string terminator
+      # are separated by \uXXXX so they never form the ''' Nix string terminator
       _icon_folder=$''
       _icon_git=$''
       _icon_arrow=$''

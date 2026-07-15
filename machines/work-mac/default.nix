@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   system.primaryUser = "joe";
 
   homebrew.taps = [ "azure/functions" ];
@@ -26,6 +26,7 @@
 
   home-manager.users.joe = { ... }: {
     programs.git.userName  = "Jan Oehen";
-    programs.git.userEmail = "TODO@company.com";
+    # TODO: replace with your actual work email
+    programs.git.userEmail = lib.mkForce "TODO@company.com";
   };
 }

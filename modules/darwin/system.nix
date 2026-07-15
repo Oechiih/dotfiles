@@ -45,7 +45,7 @@
     };
 
     finder = {
-      NewWindowTarget = "PfLo";
+      NewWindowTarget = "Other";
       NewWindowTargetPath = "file:///Users/joe/git/";
       AppleShowAllFiles = true;
       AppleShowAllExtensions = true;
