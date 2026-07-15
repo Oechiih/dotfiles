@@ -1,5 +1,5 @@
 {
-  description = "Jan's dotfiles — nix-darwin + home-manager";
+  description = "Oechiih's dotfiles — nix-darwin + home-manager";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -14,7 +14,7 @@
   };
 
   outputs = { self, nixpkgs, nix-darwin, home-manager }: {
-    darwinConfigurations."Jans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."MacGuffin" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
         ./modules/darwin

@@ -1,7 +1,7 @@
 { ... }: {
   system.defaults = {
 
-    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
+    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
     loginwindow.GuestEnabled = false;
     screensaver.askForPassword = true;
 
@@ -43,22 +43,22 @@
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
       persistent-apps = [
-        "/Applications/Ghostty.app"
-        "/Applications/Visual Studio Code.app"
         "/Applications/Zen.app"
+        "/System/Applications/Mail.app"
+        "/System/Applications/Messages.app"
+        "/System/Applications/Calendar.app"
+        "/System/Applications/Music.app"
+        "/Applications/Visual Studio Code.app"
+        "/Applications/Ghostty.app"
         "/Applications/1Password.app"
         "/Applications/Reeder.app"
         "/Applications/Mela.app"
-        "/Applications/Infuse.app"
         "/Applications/Royal TSX.app"
-        "/Applications/IBKR Desktop.app"
         "/Applications/Discord.app"
+        "/Applications/IBKR Desktop.app"
         "/Applications/TradingView.app"
+        "/Applications/Infuse.app"
         "/Applications/Bambu Studio.app"
-        "/System/Applications/Mail.app"
-        "/System/Applications/Calendar.app"
-        "/System/Applications/Messages.app"
-        "/System/Applications/Music.app"
       ];
     };
 

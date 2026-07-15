@@ -70,13 +70,13 @@ cd ~/Documents/git/dotfiles
 ### 3. Apply the configuration
 
 ```bash
-nix run nix-darwin -- switch --flake .#Jans-MacBook-Pro
+nix run nix-darwin -- switch --flake .#MacGuffin
 ```
 
 On subsequent rebuilds:
 
 ```bash
-darwin-rebuild switch --flake .#Jans-MacBook-Pro
+darwin-rebuild switch --flake .#MacGuffin
 ```
 
 ### 4. Zen browser

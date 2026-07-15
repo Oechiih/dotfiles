@@ -3,7 +3,7 @@
     enable = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "zap";
+      cleanup = "uninstall";
     };
     taps = [
       "anomalyco/tap"

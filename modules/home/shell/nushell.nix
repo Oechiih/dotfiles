@@ -1,9 +1,11 @@
 { ... }: {
-  # programs.nushell targets ~/.config/nushell/ which nushell ignores on macOS.
-  # Use home.file to place configs at the correct macOS path directly.
-  home.file = {
-    "Library/Application Support/nushell/config.nu".source = ../../../config/nushell/config.nu;
-    "Library/Application Support/nushell/env.nu".source = ../../../config/nushell/env.nu;
-    "Library/Application Support/nushell/catppuccin-frappe.nu".source = ../../../config/nushell/catppuccin-frappe.nu;
+  programs.nushell = {
+    enable = true;
+    configFile.source = ../../../config/nushell/config.nu;
+    envFile.source = ../../../config/nushell/env.nu;
   };
+
+  # Not managed by programs.nushell — placed alongside config.nu so the source command works
+  home.file.".config/nushell/catppuccin-frappe.nu".source =
+    ../../../config/nushell/catppuccin-frappe.nu;
 }

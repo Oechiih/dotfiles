@@ -12,11 +12,7 @@
     "Library/Application Support/Code/User/settings.json".source =
       ../../config/vscode/settings.json;
 
-    # Zen user.js — must be copied into the active profile directory manually on first run.
-    # See README for the profile path.
-    ".config/zen/user.js".source = ../../config/zen/user.js;
-
-    # htop
+    # htop — ~/.config/htop/htoprc
     ".config/htop/htoprc".source = ../../config/htop/htoprc;
 
     # opencode plugins
