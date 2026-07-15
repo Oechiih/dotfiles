@@ -70,6 +70,30 @@
         autoForwardBranches = "allBranches";
         autoStash = true;
       };
+      # Swiss German keyboard — physical position mapping, see keymaps.md
+      keybinding = {
+        universal = {
+          prevTab                   = "ü";   # [
+          nextTab                   = "¨";   # ]
+          decreaseContextInDiffView = "è";   # {
+          increaseContextInDiffView = "!";   # }
+          startSearch               = "-";   # /
+          optionMenu                = "_";   # ?
+          prevScreenMode            = "?";   # _
+          nextScreenMode            = "`";   # +
+          executeShellCommand       = "é";   # :
+          cyclePagersReverse        = "$";   # \
+          cyclePagers               = "£";   # |
+        };
+        files = {
+          toggleTreeView = "§";   # `
+          collapseAll    = "'";   # -
+          expandAll      = "^";   # =
+        };
+        commitFiles = {
+          toggleTreeView = "§";   # `
+        };
+      };
     };
   };
 }
