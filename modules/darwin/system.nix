@@ -42,24 +42,6 @@
       wvous-tr-corner = 1;
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
-      persistent-apps = [
-        "/Applications/Zen.app"
-        "/System/Applications/Mail.app"
-        "/System/Applications/Messages.app"
-        "/System/Applications/Calendar.app"
-        "/System/Applications/Music.app"
-        "/Applications/Visual Studio Code.app"
-        "/Applications/Ghostty.app"
-        "/Applications/1Password.app"
-        "/Applications/Reeder.app"
-        "/Applications/Mela.app"
-        "/Applications/Royal TSX.app"
-        "/Applications/Discord.app"
-        "/Applications/IBKR Desktop.app"
-        "/Applications/TradingView.app"
-        "/Applications/Infuse.app"
-        "/Applications/Bambu Studio.app"
-      ];
     };
 
     finder = {

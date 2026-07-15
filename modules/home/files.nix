@@ -1,5 +1,5 @@
-{ ... }: {
-  home.file = {
+{ lib, pkgs, ... }: {
+  home.file = lib.mkIf pkgs.stdenv.isDarwin {
     # Ghostty
     "Library/Application Support/com.mitchellh.ghostty/config".source =
       ../../config/ghostty/config;

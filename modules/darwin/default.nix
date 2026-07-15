@@ -7,11 +7,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  networking.computerName = "MacGuffin";
-  networking.hostName = "MacGuffin";
-
-  system.primaryUser = "joe";
-
   environment.shells = with pkgs; [ nushell ];
 
   environment.variables.XDG_CONFIG_HOME = "$HOME/.config";
