@@ -7,6 +7,7 @@
     ./shell/nushell.nix
     ./tools/lazygit.nix
     ./tools/gh.nix
+    ./tools/vscode.nix
     ./files.nix
   ];
 
