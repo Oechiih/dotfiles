@@ -52,8 +52,10 @@
 
     # Silently route SSH oechiih remotes through a dedicated Host alias so
     # they pick up the matchBlock below, without needing to rewrite remotes
-    # by hand.
-    programs.git.extraConfig.url."git@github.com-oechiih:".insteadOf = [
+    # by hand. The org segment must be repeated in the replacement prefix —
+    # insteadOf substitutes the whole matched prefix, it doesn't preserve
+    # the part it matched.
+    programs.git.extraConfig.url."git@github.com-oechiih:Oechiih/".insteadOf = [
       "git@github.com:oechiih/"
       "git@github.com:Oechiih/"
     ];
@@ -66,8 +68,12 @@
       "github.com-oechiih" = {
         hostname = "github.com";
         user = "git";
-        identitiesOnly = true;
-        identityAgent = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+        # No identitiesOnly here: it restricts ssh to local ~/.ssh/id_*
+        # files (or explicit IdentityFile entries), excluding anything the
+        # agent offers that doesn't match — since there's no local key file
+        # at all (1Password's agent is the only source), that left zero
+        # identities to try and every auth attempt failed silently.
+        identityAgent = "\"~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock\"";
       };
     };
   };
