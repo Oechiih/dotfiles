@@ -18,6 +18,9 @@
       hmUsers = {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
+        # Move pre-existing files (e.g. macOS/Homebrew-installer-created
+        # dotfiles on a fresh machine) aside instead of refusing to activate.
+        home-manager.backupFileExtension = "hm-bak";
         home-manager.users.joe = import ./modules/home;
       };
       mkDarwin = extraModules: nix-darwin.lib.darwinSystem {

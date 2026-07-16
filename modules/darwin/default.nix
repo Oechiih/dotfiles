@@ -15,6 +15,9 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # Determinate Nix manages its own daemon; let it, instead of nix-darwin.
+  nix.enable = false;
+
   # Avoid a logout/login cycle after rebuild — activation now runs as root,
   # so run this as the user it needs to affect.
   system.activationScripts.postActivation.text = ''

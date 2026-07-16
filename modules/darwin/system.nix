@@ -112,7 +112,7 @@
       "com.knollsoft.Rectangle" = {
         launchOnLogin = true;
         hideMenubarIcon = false;
-        gapSize = 8;
+        gapSize = 0;
         windowSnapping = true;
       };
     };

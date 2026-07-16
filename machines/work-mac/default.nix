@@ -1,7 +1,7 @@
 { lib, ... }: {
   system.primaryUser = "joe";
 
-  homebrew.taps = [ "azure/functions" ];
+  homebrew.taps = [ { name = "azure/functions"; trusted = true; } ];
   homebrew.brews = [
     "azure/functions/azure-functions-core-tools@4"
   ];
