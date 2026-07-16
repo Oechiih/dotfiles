@@ -25,10 +25,10 @@
   ];
 
   home-manager.users.joe = { ... }: {
-    programs.git.userName  = "Jan Oehen";
+    programs.git.settings.user.name  = "Jan Oehen";
     # TODO: replace with your actual work email — this is the default
     # identity; oechiih (personal) repos override it below.
-    programs.git.userEmail = lib.mkForce "TODO@company.com";
+    programs.git.settings.user.email = lib.mkForce "TODO@company.com";
 
     # Personal (github.com/oechiih) repos get your personal identity,
     # matched by remote URL so it applies regardless of clone location.
@@ -55,7 +55,7 @@
     # by hand. The org segment must be repeated in the replacement prefix —
     # insteadOf substitutes the whole matched prefix, it doesn't preserve
     # the part it matched.
-    programs.git.extraConfig.url."git@github.com-oechiih:Oechiih/".insteadOf = [
+    programs.git.settings.url."git@github.com-oechiih:Oechiih/".insteadOf = [
       "git@github.com:oechiih/"
       "git@github.com:Oechiih/"
     ];
@@ -64,7 +64,7 @@
     # through 1Password's agent; every other host falls back to the system
     # default (ssh-agent / company-provided keys), unlike the shared
     # ssh.nix default which points everything at 1Password.
-    programs.ssh.matchBlocks = lib.mkForce {
+    programs.ssh.settings = lib.mkForce {
       "github.com-oechiih" = {
         hostname = "github.com";
         user = "git";

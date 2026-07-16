@@ -25,6 +25,9 @@
       NSNavPanelExpandedStateForSaveMode = true;
       NSNavPanelExpandedStateForSaveMode2 = true;
       NSWindowShouldDragOnGesture = true;
+      # Always auto-hide the menu bar (paired with
+      # AppleMenuBarVisibleInFullscreen = false below).
+      _HIHideMenuBar = true;
     };
 
     dock = {
@@ -69,6 +72,11 @@
         AppleWindowTabbingMode = "always";
         NSCloseAlwaysConfirmsChanges = true;
         WebKitDeveloperExtras = true;
+        # Pairs with system.defaults.NSGlobalDomain._HIHideMenuBar above to
+        # mean "Always" hide (false+true), vs. "On Desktop Only" (true+true).
+        AppleMenuBarVisibleInFullscreen = false;
+        # Solid/blurred menu bar background instead of fully transparent.
+        SLSMenuBarUseBlurredAppearance = true;
       };
       "com.apple.finder" = {
         FXICloudDriveDesktop = true;
@@ -84,7 +92,9 @@
         "disable-shadow" = true;
       };
       "com.apple.controlcenter" = {
-        "NSStatusItem Visible Sound" = true;
+        # Was "NSStatusItem Visible Sound" (wrong key, silently did
+        # nothing — the real key has "VisibleCC" in it).
+        "NSStatusItem VisibleCC Sound" = true;
         BatteryShowPercentage = true;
       };
       "com.apple.menuextra.battery" = {

@@ -1,7 +1,11 @@
-{ ... }: {
+{ config, ... }: {
   programs.zsh = {
     enable = true;
     autocd = true;
+    # Pin the pre-26.05 default (home directory) explicitly now that
+    # home-manager warns the default is changing, so behavior doesn't
+    # shift out from under us on a future home-manager update.
+    dotDir = config.home.homeDirectory;
 
     history = {
       size = 10000;
@@ -19,7 +23,7 @@
       tree = "eza --icons --tree";
     };
 
-    initExtra = ''
+    initContent = ''
       WORDCHARS='*?[]~&;!#$%^(){}<>'
 
       # Completion
