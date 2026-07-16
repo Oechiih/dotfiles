@@ -1,22 +1,23 @@
 { lib, pkgs, ... }: {
-  home.file = lib.mkIf pkgs.stdenv.isDarwin {
-    # Ghostty
-    "Library/Application Support/com.mitchellh.ghostty/config".source =
-      ../../config/ghostty/config;
-    "Library/Application Support/com.mitchellh.ghostty/themes/catppuccin-frappe.conf".source =
+  # Ghostty loads its base config from ~/Library/Application Support/ on
+  # Darwin, but resolves custom `theme = ...` files specifically from
+  # $XDG_CONFIG_HOME/ghostty/themes/ (~/.config/ghostty/themes/) regardless —
+  # so the themes have to live there even though the config itself doesn't.
+  xdg.configFile = {
+    "ghostty/config".source = ../../config/ghostty/config;
+    "ghostty/themes/catppuccin-frappe.conf".source =
       ../../config/ghostty/themes/catppuccin-frappe.conf;
-    "Library/Application Support/com.mitchellh.ghostty/themes/catppuccin-latte.conf".source =
+    "ghostty/themes/catppuccin-latte.conf".source =
       ../../config/ghostty/themes/catppuccin-latte.conf;
+  };
 
+  home.file = lib.mkIf pkgs.stdenv.isDarwin {
     # VS Code settings
     "Library/Application Support/Code/User/settings.json".source =
       ../../config/vscode/settings.json;
 
     # htop — ~/.config/htop/htoprc
     ".config/htop/htoprc".source = ../../config/htop/htoprc;
-
-    # opencode plugins
-    ".config/opencode/package.json".source = ../../config/opencode/package.json;
 
     # PowerShell profile
     ".config/powershell/Microsoft.PowerShell_profile.ps1".source =

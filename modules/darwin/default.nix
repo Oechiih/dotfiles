@@ -11,6 +11,12 @@
 
   environment.variables.XDG_CONFIG_HOME = "$HOME/.config";
 
+  # nix-darwin doesn't add Homebrew's prefix to PATH on its own, and
+  # home-manager now owns .zprofile so the old `eval "$(brew shellenv)"`
+  # line is gone — without this, brew itself and every cask/formula binary
+  # (e.g. pwsh) are invisible in a fresh shell.
+  environment.systemPath = [ "/opt/homebrew/bin" "/opt/homebrew/sbin" ];
+
   users.users.joe.home = "/Users/joe";
 
   security.pam.services.sudo_local.touchIdAuth = true;

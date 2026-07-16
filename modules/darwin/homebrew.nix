@@ -16,6 +16,10 @@
       "container"
       "opencode"
       "pkl"
+      # The cask named "powershell" was removed from homebrew-cask; stable
+      # PowerShell now ships as a bottled formula instead. The remaining
+      # "powershell@preview" cask is the beta build, not what we want.
+      "powershell"
     ];
     casks = [
       "1password"
@@ -23,7 +27,6 @@
       "blockblock"
       "ghostty"
       "lulu"
-      "powershell@preview"
       "rectangle"
       "shaunsingh/sfmono-nerd-font-ligaturized/font-sf-mono-nerd-font-ligaturized"
       "visual-studio-code"
