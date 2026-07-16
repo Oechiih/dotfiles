@@ -28,9 +28,9 @@
     };
 
     dock = {
-      tilesize = 32;
+      tilesize = 64;
       magnification = true;
-      largesize = 44;
+      largesize = 76;
       minimize-to-application = true;
       show-process-indicators = true;
       mru-spaces = false;
