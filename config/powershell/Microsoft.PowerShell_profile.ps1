@@ -10,6 +10,11 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
 Set-PSReadLineOption -MaximumHistoryCount 400
 
+# Above this many matches, MenuComplete falls back to the disruptive
+# "Display all N possibilities (y/n)" prompt instead of the menu (default
+# is 100) — raised well past normal directory sizes to avoid it.
+Set-PSReadLineOption -CompletionQueryItems 1000
+
 Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Key 'Ctrl+g' -ScriptBlock {lazygit}

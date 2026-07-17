@@ -77,6 +77,10 @@
         AppleMenuBarVisibleInFullscreen = false;
         # Solid/blurred menu bar background instead of fully transparent.
         SLSMenuBarUseBlurredAppearance = true;
+        # Text-selection highlight color. RGB float triple + Apple's own
+        # name for the preset swatch (System Settings > Appearance >
+        # Highlight color > Pink), not an arbitrary pink shade.
+        AppleHighlightColor = "1.000000 0.749020 0.823529 Pink";
       };
       "com.apple.finder" = {
         FXICloudDriveDesktop = true;
@@ -124,6 +128,22 @@
         hideMenubarIcon = false;
         gapSize = 0;
         windowSnapping = true;
+      };
+      "com.apple.symbolichotkeys" = {
+        AppleSymbolicHotKeys = {
+          # Hotkey 27 = "Move focus to next window" (System Settings >
+          # Keyboard > Keyboard Shortcuts > Mission Control), i.e. cycle
+          # through windows of the frontmost app. Default is Cmd+`;
+          # rebound to Ctrl+§ (keycode 10 = kVK_ISO_Section, the § key on
+          # ISO/Swiss-German keyboards; 262144 = Control-only modifier).
+          "27" = {
+            enabled = true;
+            value = {
+              type = "standard";
+              parameters = [ 167 10 262144 ];
+            };
+          };
+        };
       };
     };
   };
